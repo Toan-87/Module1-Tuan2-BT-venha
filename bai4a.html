@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4a</title>
+</head>
+<body>
+<!--Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p:-->
+<!--a. Nhập vào a, hiển thị ra chu vi và diện tích và hình vuông độ dài cạnh a-->
+<p>Cạnh hình vuông</p>
+<input id="length" type="text"placeholder="Nhập cạnh hình vuông">
+<br>
+<button onclick="area()">Area</button>
+<button onclick="per()">Perimeter</button>
+<p id="result"></p>
+<script>
+    function area() {
+        let a = document.getElementById('length').value;
+        let S = a*a
+        document.getElementById('result').innerHTML = 'Diện tích=' + S
+    }
+</script>
+<script>
+    function per() {
+        let a = document.getElementById('length').value;
+        let C = a*4
+        document.getElementById('result').innerHTML = 'Chu vi=' + C
+    }
+</script>
+</body>
+</html>

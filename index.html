@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap</title>
+</head>
+<body>
+<!--Bài1: Câu lệnh nào để hiển thị 1 hộp thoại.  Nêu cú pháp hiển thị tên bạn lên hộp thoại.-->
+ -  Câu lệnh Hiện thị 1 hộp thoại là : alert()
+ -  Cú pháp hiện tên: alert(“Toàn”)
+<!--Bài2: Câu lệnh nào để nhận 1 giá trị từ 1 hộp thoại. Viết code nhận giá trị từ-->
+<!--hộp thoại, hiển thị bình phương của số đó ra hộp thoại.-->
+ -  Câu lệnh nhận giá trị từ 1 hộp thoại là : prompt()
+ -  Code nhận giá trị từ hộp thoại, hiển thị bình phương của số đó ra hộp thoại:
+<script>
+    let number = prompt('Enter a number:','');
+    let square = number * number;
+    alert("square=" + square);
+</script>
+<!--Bài3: Câu lệnh nào nhận vào giá trị từ 1 ô input. Viết code nhận a và b từ 2 ô input và hiển thị S = a*b ra thẻ h1.-->
+  - Câu lệnh nhận vào giá trị từ 1 ô input là : document.getElementById().value;
+  - Code nhận a và b từ 2 ô input và hiển thị S = a*b ra thẻ h1
+<input type="text" id="firtNumber">
+<input type="text" id="secondNumber">
+<button onclick="area()">Hiển thị S</button>
+<div id="area"></div>
+<script>
+    function area () {
+        let a = document.getElementById('firtNumber').value;
+        let b = document.getElementById('secondNumber').value;
+        let S= a*b;
+        document.write("<h1>S="+S+"</h1>")
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4d</title>
+</head>
+<body>
+<!--Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p,Nhập vào a là năm, in ra thế kỉ.-->
+<input type="text" id="year"placeholder="Nhập năm">
+<br>
+<button onclick="century()">Century</button>
+<p id="result"></p>
+<script>
+   function century() {
+       let year = document.getElementById('year').value;
+       let Cen = year/100;
+       if (year % 100 == 0) {
+           document.getElementById('result').innerHTML = 'Thế kỉ: '+ Cen;
+       }
+       else {
+           document.getElementById('result').innerHTML = 'Thế kỉ: '+ parseInt(Cen + 1);
+       }
+   }
+</script>
+</body>
+</html>

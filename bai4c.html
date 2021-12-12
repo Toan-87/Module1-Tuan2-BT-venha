@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4c</title>
+</head>
+<body>
+<!--Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p, Nhập vào a và b, tính tổng các số từ a đến b-->
+<input type="text"id="firtNumber" placeholder="Nhập a">
+<input type="text"id="secondNumber" placeholder="Nhập b">
+<button onclick="sum()">Totol</button>
+<p id="result"></p>
+<script>
+    function sum() {
+        let a = parseInt(document.getElementById('firtNumber').value);
+        let b = parseInt(document.getElementById('secondNumber').value);
+        let sum = 0;
+        for (i = a; i<= b; i++) {
+            sum = sum + i
+        }
+        document.getElementById('result').innerHTML = 'Sum= '+ sum
+    }
+</script>
+</body>
+</html>

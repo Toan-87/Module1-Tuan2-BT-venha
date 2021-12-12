@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4e</title>
+</head>
+<body>
+<!--Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p-->
+<!--Nhập vào a, b, c, kiểm tra xem a, b, c có phải là 3 cạnh của:-->
+<!--i. 1 tam giác?-->
+<!--ii. 1 tam giác cân?-->
+<!--iii. 1 tam giác đều?-->
+<!--iv. 1 tam giác vuông?-->
+<input type="text"id="canh1" placeholder="Nhập cạnh thứ nhất">
+<input type="text"id="canh2" placeholder="Nhập cạnh thứ hai">
+<input type="text"id="canh3" placeholder="Nhập cạnh thứ ba">
+<br>
+<button onclick="tamgiac()">kiểm tra tam giác</button>
+<button onclick="tamgiaccan()">kiểm tra tam giác cân </button>
+<button onclick="tamgiacdeu()">kiểm tra tam giác đều </button>
+<button onclick="tamgiacvuong()">kiểm tra tam giác vuông </button>
+<p id="kết quả"></p>
+<script>
+    function tamgiac() {
+        let a = parseInt(document.getElementById('canh1').value);
+        let b = parseInt(document.getElementById('canh2').value);
+        let c = parseInt(document.getElementById('canh3').value);
+        if (a+b>c && a+c>b && b+c>a){
+            document.getElementById('kết quả').innerHTML = 'Là 3 cạnh của 1 tam giác';
+        }else {
+            document.getElementById('kết quả').innerHTML =  'không phải Là 3 cạnh của 1 tam giác';
+        }
+    }
+</script>
+<script>
+    function tamgiaccan() {
+        let a = parseInt(document.getElementById('canh1').value);
+        let b = parseInt(document.getElementById('canh2').value);
+        let c = parseInt(document.getElementById('canh3').value);
+        if (a+b>c && a+c>b && b+c>a){
+            if (a==b || b==c || a==c){
+                document.getElementById('kết quả').innerHTML =  'Là 3 cạnh của 1 tam giác cân';
+            }else {
+                document.getElementById('kết quả').innerHTML = 'Là 3 cạnh của 1 tam giác';
+            }
+        }else {
+            document.getElementById('kết quả').innerHTML =  'không phải Là 3 cạnh của 1 tam giác';
+        }
+    }
+</script>
+<script>
+    function tamgiacdeu() {
+        let a = parseInt(document.getElementById('canh1').value);
+        let b = parseInt(document.getElementById('canh2').value);
+        let c = parseInt(document.getElementById('canh3').value);
+        if (a+b>c && a+c>b && b+c>a){
+            if (a==b && b==c ){
+                document.getElementById('kết quả').innerHTML =  'Là 3 cạnh của 1 tam giác đều';
+            }else {
+                document.getElementById('kết quả').innerHTML = 'Là 3 cạnh của 1 tam giác';
+            }
+        }else {
+            document.getElementById('kết quả').innerHTML =  'không phải Là 3 cạnh của 1 tam giác';
+        }
+    }
+</script>
+<script>
+    function tamgiacvuong() {
+        let a = parseInt(document.getElementById('canh1').value);
+        let b = parseInt(document.getElementById('canh2').value);
+        let c = parseInt(document.getElementById('canh3').value);
+        let binhphuong1 = a*a;
+        let binhphuong2 = b*b;
+        let binhphuong3 = c*c;
+        if (a+b>c && a+c>b && b+c>a){
+            if (binhphuong1 == binhphuong2 + binhphuong3 ||
+                binhphuong2 == binhphuong1 + binhphuong3 ||
+                binhphuong3 == binhphuong1 + binhphuong2){
+                document.getElementById('kết quả').innerHTML =  'Là 3 cạnh của 1 tam giác vuông';
+            }else {
+                document.getElementById('kết quả').innerHTML = 'Là 3 cạnh của 1 tam giác';
+            }
+        }else {
+            document.getElementById('kết quả').innerHTML =  'không phải Là 3 cạnh của 1 tam giác';
+        }
+    }
+</script>
+</body>
+</html>

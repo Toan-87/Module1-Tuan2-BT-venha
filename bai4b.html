@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai4b</title>
+</head>
+<body>
+<!--Viết chương trình nhập vào từ ô input, hiện kết quả ra thẻ p Nhập vào a và b, tính a^2, a^b-->
+<input id="firtNumber" type="text"placeholder="Nhập a">
+<input id="secondNumber" type="text"placeholder="Nhập b">
+<br>
+<button onclick="result()">a<sup>2</sup></button>
+<button onclick="result2()">a<sup>b</sup></button>
+<p id="result"></p>
+<script>
+    function result() {
+        let a = document.getElementById('firtNumber').value;
+        let c = Math.pow(a, 2);
+        document.getElementById('result').innerHTML = 'a<sup>2</sup> =' + c;
+    }
+</script>
+<script>
+    function result2() {
+        let a = document.getElementById('firtNumber').value;
+        let b = document.getElementById('secondNumber').value;
+        let d = Math.pow(a, b);
+        document.getElementById('result').innerHTML = 'a<sup>b</sup> =' + d;
+    }
+</script>
+</body>
+</html>
